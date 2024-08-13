@@ -100,6 +100,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function () {
     Route::get('/apps-jobs', [AdminsController::class, 'DisplayApps'])->name('display.apps');
     Route::delete('/delete-apps/{id}', [AdminsController::class, 'deleteApps'])->name('delete.apps');
 
+    Route::post('admin/logout', [AdminsController::class, 'adminLogout'])->name('admin.logout');
+
 
 });
 
