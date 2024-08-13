@@ -20,18 +20,13 @@ class AdminsController extends Controller
         return view('admins.view-login');
     }
     
-    public function checkLogin(Request $request)
-    {
-        $rememberMe = $request->has('remember_me');
+   $remember_me = $request->has('remember_me') ? true : false;
 
-        if (Auth::guard('admin')->attempt([
-            'email' => $request->input('email'), 
-            'password' => $request->input('password')
-        ], $rememberMe)) {
-            return redirect()->route('admin.dashboard');
+        if (auth()->guard('admin')->attempt(['email' => $request->input("email"), 'password' => $request->input("password")], $remember_me)) {
+            
+            return redirect() -> route('admin.dashboard');
         }
-
-        return redirect()->back()->with(['error' => 'Error logging in']);
+        return redirect()->back()->with(['error' => 'error logging in']);
     }
 
 
