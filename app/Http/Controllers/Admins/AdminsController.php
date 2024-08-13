@@ -271,5 +271,14 @@ class AdminsController extends Controller
         return redirect()->route('display.apps')->with('success', 'Application deleted successfully.');
     }
 
+    public function adminLogout(Request $request)
+    {
+        Auth::guard('admin')->logout(); // Admin guard se logout karein
+
+        $request->session()->invalidate(); // Session ko invalidate karein
+        $request->session()->regenerateToken(); // CSRF token regenerate karein
+
+        return redirect()->route('view.login'); // Login page par redirect karein
+    }
 
 }
