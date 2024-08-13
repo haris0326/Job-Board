@@ -18,7 +18,7 @@ Follow these steps to set up the project on your local machine:
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/haris0326/job-board.git
+   git clone (https://github.com/haris0326/Job-Board.git)
    ```
 
 2. **Navigate to the Project Directory**
@@ -82,4 +82,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For any inquiries, please contact (digitalpartner56@gmail.com).
 ```
 
-Replace `https://github.com/yourusername/job-board.git` with the actual URL of your GitHub repository and `your.digitalpartner56@gmail.com` with your contact email.
+Replace `(https://github.com/haris0326/Job-Board.git)` with the actual URL of your GitHub repository and `your.digitalpartner56@gmail.com` with your contact email.
