@@ -53,31 +53,23 @@
             </a>
           </li>
          
-          <li class="nav-item dropdown">
+           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              {{ Auth::guard('admin')->user()->email }}
-
+                {{ Auth::guard('admin')->user()->email }}
             </a>
             
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="{{ route('logout') }}"
-                 onclick="event.preventDefault();
-                          document.getElementById('logout-form').submit();">
-                  {{ __('Logout') }}
-              </a>             
-          </div>
-          
-          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-              @csrf
-          </form>
-          
-
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-              @csrf
-          </form>
-          
+                <a class="dropdown-item" href="{{ route('admin.logout') }}"
+                   onclick="event.preventDefault();
+                             document.getElementById('admin-logout-form').submit();">
+                    {{ __('Logout') }}
+                </a>             
+            </div>
             
-          </li>
+            <form id="admin-logout-form" action="{{ route('admin.logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
+        </li>
         
         @else
 
