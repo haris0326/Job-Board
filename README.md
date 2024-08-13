@@ -81,5 +81,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For any inquiries, please contact (digitalpartner56@gmail.com).
 ```
-
-Replace `(https://github.com/haris0326/Job-Board.git)` with the actual URL of your GitHub repository and `your.digitalpartner56@gmail.com` with your contact email.
